@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hon Weng</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .profile-card {
+            background: #1a1a1a;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            max-width: 350px;
+            width: 90%;
+            border: 1px solid #2a2a2a;
+        }
+        .profile-card h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+            color: #e67e22;
+        }
+        .profile-card p {
+            color: #888;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #222;
+            color: #eaeaea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            border: 1px solid #333;
+        }
+        .btn:hover {
+            background-color: #e67e22;
+            border-color: #e67e22;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+        }
+        .footer {
+            margin-top: 2.5rem;
+            font-size: 0.75rem;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <h1>Hon Weng</h1>
+        <p>Software Engineer</p>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/yeehonweng/" target="_blank" class="btn">LinkedIn</a>
+            <a href="https://github.com/honweng" target="_blank" class="btn">GitHub</a>
+        </div>
+        <div class="footer">Hosted by Kaia 🦊</div>
+    </div>
+</body>
+</html>
