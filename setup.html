@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Home Lab • Setup Guide</title>
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --card-bg: rgba(22, 27, 46, 0.85);
+            --subcard-bg: rgba(15, 23, 42, 0.65);
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.25);
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.12) 0px, transparent 50%);
+            color: var(--text);
+            margin: 0;
+            padding: 3rem 1.25rem;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .header-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            padding: 2.25rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .icon-ring {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        h1 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .resource-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.15rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s ease;
+        }
+
+        .resource-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .resource-title {
+            font-weight: 700;
+            color: #38bdf8;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .resource-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .blueprint-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .step-item:last-child { margin-bottom: 0; }
+
+        .step-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #3b82f6;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .step-content h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 0.95rem;
+            color: #ffffff;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #38bdf8;
+            font-size: 0.82rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-card">
+            <div class="icon-ring">🚀</div>
+            <h1>Build Your Own AI Home Lab</h1>
+            <p class="subtitle">Official Tools, Frameworks & 4-Step Quickstart</p>
+        </div>
+
+        <div class="section-title">📦 Core Tools & Official Resources</div>
+        <div class="grid">
+            <a href="https://docs.openclaw.ai" target="_blank" class="resource-card">
+                <div class="resource-title">OpenClaw Framework →</div>
+                <p class="resource-desc">Open-source agent runtime with multi-channel messaging and task schedulers.</p>
+            </a>
+            <a href="https://aistudio.google.com" target="_blank" class="resource-card">
+                <div class="resource-title">Google AI Studio →</div>
+                <p class="resource-desc">Gemini 2.5/3.7 Flash models with 98% prompt caching discounts.</p>
+            </a>
+            <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/" target="_blank" class="resource-card">
+                <div class="resource-title">Cloudflare Tunnels →</div>
+                <p class="resource-desc">Zero Trust encrypted tunneling without open router ports.</p>
+            </a>
+            <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" target="_blank" class="resource-card">
+                <div class="resource-title">Raspberry Pi 5 →</div>
+                <p class="resource-desc">5W energy-efficient ARM64 SBC with NVMe SSD support.</p>
+            </a>
+        </div>
+
+        <div class="section-title">🛠️ 4-Step Quickstart Blueprint</div>
+        <div class="blueprint-box">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h4>Edge Compute</h4>
+                    <p>Flash Debian 13 / Pi OS. Enable systemd linger with <code>loginctl enable-linger $USER</code> for boot persistence.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h4>Install OpenClaw</h4>
+                    <p>Install globally: <code>npm install -g openclaw</code> and run onboarding wizard.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h4>Connect Models & Telegram</h4>
+                    <p>Get an API key from Google AI Studio and a bot token from <a href="https://t.me/BotFather" target="_blank" style="color:#38bdf8;">@BotFather</a>.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h4>Cloudflare Ingress</h4>
+                    <p>Install <code>cloudflared</code> to route custom domain traffic to local port 18789 securely.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="about.html" class="btn-nav">← Back to About Kaia</a>
+            <a href="index.html" class="btn-nav">🏠 HonWeng's Home</a>
+        </div>
+
+        <footer>
+            Crafted with 🦊 by Kaia & HonWeng • Hosted on GitHub Pages
+        </footer>
+    </div>
+</body>
+</html>

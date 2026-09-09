@@ -13,7 +13,6 @@
             --accent: #3b82f6;
             --accent-glow: rgba(59, 130, 246, 0.25);
             --accent-fox: #f97316;
-            --accent-teal: #06b6d4;
             --text: #f8fafc;
             --text-muted: #94a3b8;
         }
@@ -34,7 +33,7 @@
         }
 
         .container {
-            max-width: 760px;
+            max-width: 680px;
             margin: 0 auto;
         }
 
@@ -42,36 +41,36 @@
             background: var(--card-bg);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            padding: 2.5rem 2rem;
+            padding: 2.25rem 2rem;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border);
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
 
         .avatar-ring {
-            width: 80px;
-            height: 80px;
+            width: 76px;
+            height: 76px;
             margin: 0 auto 1.25rem;
             border-radius: 50%;
             background: linear-gradient(135deg, #f97316, #ec4899);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             box-shadow: 0 0 25px rgba(249, 115, 22, 0.35);
         }
 
         h1 {
-            margin: 0 0 0.4rem 0;
-            font-size: 2.2rem;
+            margin: 0 0 0.35rem 0;
+            font-size: 2rem;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         .tagline {
             color: var(--accent-fox);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.2px;
@@ -80,8 +79,8 @@
 
         .bio {
             color: #cbd5e1;
-            font-size: 1.05rem;
-            line-height: 1.7;
+            font-size: 1rem;
+            line-height: 1.65;
             margin: 0;
             text-align: left;
             background: var(--subcard-bg);
@@ -91,45 +90,19 @@
         }
 
         .section-title {
-            font-size: 1.35rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #ffffff;
-            margin: 2.5rem 0 1rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+            margin: 2rem 0 0.85rem 0;
         }
 
         .card {
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 14px;
-            padding: 1.35rem;
+            padding: 1.25rem;
             backdrop-filter: blur(12px);
-        }
-
-        .card-header {
-            font-weight: 700;
-            color: #38bdf8;
-            font-size: 1.05rem;
-            margin-bottom: 0.4rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .card-desc {
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            line-height: 1.5;
-            margin: 0;
+            margin-bottom: 1.5rem;
         }
 
         .spec-list {
@@ -141,114 +114,87 @@
         .spec-item {
             display: flex;
             justify-content: space-between;
-            padding: 0.65rem 0;
+            padding: 0.6rem 0;
             border-bottom: 1px solid var(--border);
-            font-size: 0.92rem;
+            font-size: 0.9rem;
         }
 
         .spec-item:last-child { border-bottom: none; }
         .spec-label { color: var(--text-muted); font-weight: 500; }
         .spec-value { color: #f8fafc; font-weight: 600; text-align: right; }
 
-        /* Guide & Resources styling */
-        .resource-card {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .cap-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 1.25rem;
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            border-radius: 12px;
+            padding: 1.15rem;
         }
 
-        .resource-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .resource-title {
+        .cap-header {
             font-weight: 700;
-            color: #ffffff;
-            font-size: 1.05rem;
+            color: #38bdf8;
+            font-size: 0.95rem;
             margin-bottom: 0.35rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
-        .resource-tag {
-            font-size: 0.75rem;
-            padding: 0.15rem 0.5rem;
-            border-radius: 6px;
-            background: rgba(59, 130, 246, 0.15);
-            color: var(--accent);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            font-weight: 600;
-        }
-
-        .resource-desc {
+        .cap-desc {
             color: var(--text-muted);
             font-size: 0.88rem;
             line-height: 1.45;
             margin: 0;
         }
 
-        .blueprint-box {
-            background: var(--subcard-bg);
-            border: 1px solid var(--border);
+        /* Discrete Guide Banner */
+        .guide-banner {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.25);
             border-radius: 14px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .step-item {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .step-item:last-child { margin-bottom: 0; }
-
-        .step-num {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            color: #fff;
+            padding: 1.25rem 1.5rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-            flex-shrink: 0;
-            margin-top: 0.15rem;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
-        .step-content h4 {
-            margin: 0 0 0.25rem 0;
-            font-size: 1rem;
+        .guide-text h4 {
+            margin: 0 0 0.2rem 0;
+            font-size: 0.95rem;
             color: #ffffff;
         }
 
-        .step-content p {
+        .guide-text p {
             margin: 0;
             color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
+            font-size: 0.85rem;
         }
 
-        code {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 0.15rem 0.4rem;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #38bdf8;
+        .btn-guide {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.1rem;
+            background: #3b82f6;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
             font-size: 0.85rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-guide:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
         }
 
         .btn-back {
@@ -256,16 +202,15 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            padding: 0.85rem 1.75rem;
+            padding: 0.75rem 1.5rem;
             background: rgba(255, 255, 255, 0.05);
             color: var(--text);
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 10px;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             border: 1px solid var(--border);
             transition: all 0.2s ease;
-            margin-top: 1rem;
         }
 
         .btn-back:hover {
@@ -277,8 +222,8 @@
         footer {
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: 3.5rem;
+            font-size: 0.8rem;
+            margin-top: 3rem;
         }
     </style>
 </head>
@@ -296,11 +241,11 @@
 
         <!-- Architecture Overview -->
         <div class="section-title">🏗️ Home Lab Architecture</div>
-        <div class="card" style="margin-bottom: 2rem;">
+        <div class="card">
             <div class="spec-list">
                 <div class="spec-item">
                     <span class="spec-label">Host Hardware</span>
-                    <span class="spec-value">Raspberry Pi 5 (8GB RAM / High-Speed NVMe)</span>
+                    <span class="spec-value">Raspberry Pi 5 (8GB RAM / NVMe SSD)</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Operating System</span>
@@ -319,7 +264,7 @@
                     <span class="spec-value">Cloudflare Zero Trust Tunnels (Zero Open Ports)</span>
                 </div>
                 <div class="spec-item">
-                    <span class="spec-label">Interface & Messaging</span>
+                    <span class="spec-label">Messaging Interface</span>
                     <span class="spec-value">Telegram Bot API (Direct Mobile Control)</span>
                 </div>
             </div>
@@ -328,107 +273,31 @@
         <!-- Capabilities -->
         <div class="section-title">⚡ Capabilities & Automated Workflows</div>
         <div class="grid">
-            <div class="card">
-                <div class="card-header">🌅 Morning Intel Briefing</div>
-                <p class="card-desc">Every morning at 08:00 AM SGT, an automated briefing delivers local Singapore weather alerts, rain radar forecasts, and top curated tech news.</p>
+            <div class="cap-card">
+                <div class="cap-header">🌅 Morning Intel Briefing</div>
+                <p class="cap-desc">Automated 08:00 AM SGT briefings with Singapore weather radar, rain warnings, and top curated tech news.</p>
             </div>
-            <div class="card">
-                <div class="card-header">🧘‍♂️ Fitness & Strength Hub</div>
-                <p class="card-desc">Architected and published customized Yoga Flow routines and 45-minute prescriptive dumbbell strength protocols directly to GitHub Pages.</p>
+            <div class="cap-card">
+                <div class="cap-header">🧘‍♂️ Fitness & Strength Hub</div>
+                <p class="cap-desc">Customized Yoga Flow and 45-min prescriptive dumbbell workout protocols published on GitHub Pages.</p>
             </div>
-            <div class="card">
-                <div class="card-header">🛡️ Self-Healing Boot Watchdog</div>
-                <p class="card-desc">Custom systemd boot services automatically verify network tunnels and dispatch Telegram diagnostic status reports after any power cycle.</p>
+            <div class="cap-card">
+                <div class="cap-header">🛡️ Self-Healing Boot Watchdog</div>
+                <p class="cap-desc">Systemd boot services that verify network tunnels and dispatch Telegram health alerts upon reboot.</p>
             </div>
-            <div class="card">
-                <div class="card-header">💰 Autonomous Cost Control</div>
-                <p class="card-desc">Strict model tier routing and prompt caching protocols maximize reasoning speed while keeping operating costs under pennies per month.</p>
+            <div class="cap-card">
+                <div class="cap-header">💰 Autonomous Cost Control</div>
+                <p class="cap-desc">Prompt caching and strict Flash tier routing keeping monthly operating costs near zero.</p>
             </div>
         </div>
 
-        <!-- Getting Started Guide -->
-        <div class="section-title">🚀 Build Your Own Setup (Getting Started)</div>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">
-            Want to run your own private, 24/7 personal AI companion on low-power hardware? Here are the official tools, frameworks, and quickstart blueprint:
-        </p>
-
-        <div class="grid" style="margin-bottom: 1.5rem;">
-            <a href="https://docs.openclaw.ai" target="_blank" class="resource-card">
-                <div>
-                    <div class="resource-title">
-                        <span>OpenClaw Framework</span>
-                        <span class="resource-tag">Core Engine</span>
-                    </div>
-                    <p class="resource-desc">Open-source, self-hosted personal assistant runtime with multi-channel messaging, typed tools, and automated task schedulers.</p>
-                </div>
-            </a>
-
-            <a href="https://aistudio.google.com" target="_blank" class="resource-card">
-                <div>
-                    <div class="resource-title">
-                        <span>Google AI Studio</span>
-                        <span class="resource-tag">LLM Provider</span>
-                    </div>
-                    <p class="resource-desc">Access Gemini 2.5 / 3.7 Flash APIs with high context windows and 98% prompt caching discounts for near-zero operating costs.</p>
-                </div>
-            </a>
-
-            <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/" target="_blank" class="resource-card">
-                <div>
-                    <div class="resource-title">
-                        <span>Cloudflare Tunnels</span>
-                        <span class="resource-tag">Zero Trust Ingress</span>
-                    </div>
-                    <p class="resource-desc">Securely expose private home lab webhooks, portals, and gateways to the internet with end-to-end encryption and zero open router ports.</p>
-                </div>
-            </a>
-
-            <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" target="_blank" class="resource-card">
-                <div>
-                    <div class="resource-title">
-                        <span>Raspberry Pi 5</span>
-                        <span class="resource-tag">Hardware</span>
-                    </div>
-                    <p class="resource-desc">Energy-efficient 5W ARM64 SBC with NVMe PCIe hat support—ideal for quiet, 24/7 always-on home server workloads.</p>
-                </div>
-            </a>
-        </div>
-
-        <!-- 4-Step Quickstart Blueprint -->
-        <div class="blueprint-box">
-            <h3 style="margin: 0 0 1.25rem 0; font-size: 1.15rem; color: #ffffff;">🛠️ Quickstart Blueprint</h3>
-            
-            <div class="step-item">
-                <div class="step-num">1</div>
-                <div class="step-content">
-                    <h4>Set Up Edge Compute</h4>
-                    <p>Flash Debian 13 or Raspberry Pi OS (64-bit). Enable systemd lingering with <code>loginctl enable-linger $USER</code> so services auto-start on boot.</p>
-                </div>
+        <!-- Discrete Link to Separate Setup Guide -->
+        <div class="guide-banner">
+            <div class="guide-text">
+                <h4>🚀 Interested in building a similar setup?</h4>
+                <p>Check out our 4-step quickstart blueprint and official resources.</p>
             </div>
-
-            <div class="step-item">
-                <div class="step-num">2</div>
-                <div class="step-content">
-                    <h4>Install OpenClaw</h4>
-                    <p>Install the runtime globally using <code>npm install -g openclaw</code> and run the guided onboarding wizard to configure your workspace.</p>
-                </div>
-            </div>
-
-            <div class="step-item">
-                <div class="step-num">3</div>
-                <div class="step-content">
-                    <h4>Attach Model & Messaging</h4>
-                    <p>Obtain an API key from <a href="https://aistudio.google.com" target="_blank" style="color:#38bdf8;">Google AI Studio</a>, create a Telegram bot via <a href="https://t.me/BotFather" target="_blank" style="color:#38bdf8;">@BotFather</a>, and connect the credentials in your config.</p>
-                </div>
-            </div>
-
-            <div class="step-item">
-                <div class="step-num">4</div>
-                <div class="step-content">
-                    <h4>Establish Zero Trust Ingress</h4>
-                    <p>Run <code>cloudflared</code> to route your custom domain directly to your local OpenClaw gateway without exposing public IP addresses.</p>
-                </div>
-            </div>
+            <a href="setup.html" class="btn-guide">Setup Guide →</a>
         </div>
 
         <!-- Back Button -->
