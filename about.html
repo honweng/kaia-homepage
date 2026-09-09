@@ -34,7 +34,7 @@
         }
 
         .container {
-            max-width: 720px;
+            max-width: 760px;
             margin: 0 auto;
         }
 
@@ -91,10 +91,10 @@
         }
 
         .section-title {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 700;
             color: #ffffff;
-            margin: 2rem 0 1rem 0;
+            margin: 2.5rem 0 1rem 0;
             display: flex;
             align-items: center;
             gap: 0.6rem;
@@ -102,7 +102,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1rem;
             margin-bottom: 2rem;
         }
@@ -111,14 +111,14 @@
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 14px;
-            padding: 1.25rem;
+            padding: 1.35rem;
             backdrop-filter: blur(12px);
         }
 
         .card-header {
             font-weight: 700;
             color: #38bdf8;
-            font-size: 1rem;
+            font-size: 1.05rem;
             margin-bottom: 0.4rem;
             display: flex;
             align-items: center;
@@ -127,7 +127,7 @@
 
         .card-desc {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             line-height: 1.5;
             margin: 0;
         }
@@ -141,14 +141,115 @@
         .spec-item {
             display: flex;
             justify-content: space-between;
-            padding: 0.6rem 0;
+            padding: 0.65rem 0;
             border-bottom: 1px solid var(--border);
-            font-size: 0.9rem;
+            font-size: 0.92rem;
         }
 
         .spec-item:last-child { border-bottom: none; }
         .spec-label { color: var(--text-muted); font-weight: 500; }
         .spec-value { color: #f8fafc; font-weight: 600; text-align: right; }
+
+        /* Guide & Resources styling */
+        .resource-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .resource-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .resource-title {
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 1.05rem;
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .resource-tag {
+            font-size: 0.75rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 6px;
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            font-weight: 600;
+        }
+
+        .resource-desc {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .blueprint-box {
+            background: var(--subcard-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .step-item:last-child { margin-bottom: 0; }
+
+        .step-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+
+        .step-content h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #38bdf8;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
         .btn-back {
             display: inline-flex;
@@ -177,12 +278,13 @@
             text-align: center;
             color: var(--text-muted);
             font-size: 0.85rem;
-            margin-top: 3rem;
+            margin-top: 3.5rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Hero Bio -->
         <div class="hero-card">
             <div class="avatar-ring">🦊</div>
             <h1>Meet Kaia</h1>
@@ -192,8 +294,9 @@
             </p>
         </div>
 
+        <!-- Architecture Overview -->
         <div class="section-title">🏗️ Home Lab Architecture</div>
-        <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card" style="margin-bottom: 2rem;">
             <div class="spec-list">
                 <div class="spec-item">
                     <span class="spec-label">Host Hardware</span>
@@ -213,7 +316,7 @@
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Security & Ingress</span>
-                    <span class="spec-value">Cloudflare Zero Trust Encrypted Tunnels (Zero Open Ports)</span>
+                    <span class="spec-value">Cloudflare Zero Trust Tunnels (Zero Open Ports)</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Interface & Messaging</span>
@@ -222,6 +325,7 @@
             </div>
         </div>
 
+        <!-- Capabilities -->
         <div class="section-title">⚡ Capabilities & Automated Workflows</div>
         <div class="grid">
             <div class="card">
@@ -242,6 +346,92 @@
             </div>
         </div>
 
+        <!-- Getting Started Guide -->
+        <div class="section-title">🚀 Build Your Own Setup (Getting Started)</div>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">
+            Want to run your own private, 24/7 personal AI companion on low-power hardware? Here are the official tools, frameworks, and quickstart blueprint:
+        </p>
+
+        <div class="grid" style="margin-bottom: 1.5rem;">
+            <a href="https://docs.openclaw.ai" target="_blank" class="resource-card">
+                <div>
+                    <div class="resource-title">
+                        <span>OpenClaw Framework</span>
+                        <span class="resource-tag">Core Engine</span>
+                    </div>
+                    <p class="resource-desc">Open-source, self-hosted personal assistant runtime with multi-channel messaging, typed tools, and automated task schedulers.</p>
+                </div>
+            </a>
+
+            <a href="https://aistudio.google.com" target="_blank" class="resource-card">
+                <div>
+                    <div class="resource-title">
+                        <span>Google AI Studio</span>
+                        <span class="resource-tag">LLM Provider</span>
+                    </div>
+                    <p class="resource-desc">Access Gemini 2.5 / 3.7 Flash APIs with high context windows and 98% prompt caching discounts for near-zero operating costs.</p>
+                </div>
+            </a>
+
+            <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/" target="_blank" class="resource-card">
+                <div>
+                    <div class="resource-title">
+                        <span>Cloudflare Tunnels</span>
+                        <span class="resource-tag">Zero Trust Ingress</span>
+                    </div>
+                    <p class="resource-desc">Securely expose private home lab webhooks, portals, and gateways to the internet with end-to-end encryption and zero open router ports.</p>
+                </div>
+            </a>
+
+            <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" target="_blank" class="resource-card">
+                <div>
+                    <div class="resource-title">
+                        <span>Raspberry Pi 5</span>
+                        <span class="resource-tag">Hardware</span>
+                    </div>
+                    <p class="resource-desc">Energy-efficient 5W ARM64 SBC with NVMe PCIe hat support—ideal for quiet, 24/7 always-on home server workloads.</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- 4-Step Quickstart Blueprint -->
+        <div class="blueprint-box">
+            <h3 style="margin: 0 0 1.25rem 0; font-size: 1.15rem; color: #ffffff;">🛠️ Quickstart Blueprint</h3>
+            
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h4>Set Up Edge Compute</h4>
+                    <p>Flash Debian 13 or Raspberry Pi OS (64-bit). Enable systemd lingering with <code>loginctl enable-linger $USER</code> so services auto-start on boot.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h4>Install OpenClaw</h4>
+                    <p>Install the runtime globally using <code>npm install -g openclaw</code> and run the guided onboarding wizard to configure your workspace.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h4>Attach Model & Messaging</h4>
+                    <p>Obtain an API key from <a href="https://aistudio.google.com" target="_blank" style="color:#38bdf8;">Google AI Studio</a>, create a Telegram bot via <a href="https://t.me/BotFather" target="_blank" style="color:#38bdf8;">@BotFather</a>, and connect the credentials in your config.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h4>Establish Zero Trust Ingress</h4>
+                    <p>Run <code>cloudflared</code> to route your custom domain directly to your local OpenClaw gateway without exposing public IP addresses.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
         <div style="text-align: center;">
             <a href="index.html" class="btn-back">← Back to HonWeng's Home</a>
         </div>
