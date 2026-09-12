@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HW Tech Logo</title>
+    <title>HW CPU Tech Logo</title>
     <style>
         body {
             background-color: #0b0f19;
@@ -13,15 +13,16 @@
             margin: 0;
         }
         .logo-container {
-            width: 300px;
-            height: 300px;
+            width: 320px;
+            height: 320px;
             position: relative;
-            background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(11,15,25,1) 75%);
+            background: radial-gradient(circle, rgba(59,130,246,0.22) 0%, rgba(11,15,25,1) 75%);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 35px rgba(59, 130, 246, 0.25);
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+            overflow: hidden;
         }
         svg {
             width: 100%;
@@ -32,38 +33,55 @@
 <body>
     <div class="logo-container">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- Extended Circuit Paths & Background Network -->
-            <path d="M 20 130 L 50 130 L 70 110 L 85 110" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M 180 70 L 150 70 L 130 90 L 115 90" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M 70 20 L 70 60 L 90 80" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M 130 180 L 130 140 L 110 120" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- CPU Die & IC Circuitry in Bottom Area -->
+            <!-- CPU Core Grid / Silicon Substrate -->
+            <rect x="55" y="115" width="90" height="60" rx="4" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-dasharray="2,2"/>
+            <rect x="65" y="125" width="70" height="40" rx="2" fill="rgba(30, 58, 138, 0.2)" stroke="#3b82f6" stroke-width="1"/>
             
-            <!-- Main Glowing Circuit Paths -->
-            <path d="M 30 100 L 75 100 L 85 85" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
-            <path d="M 170 100 L 125 100 L 115 115" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
-            <path d="M 100 30 L 100 75 L 85 80" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
-            <path d="M 100 170 L 100 125 L 115 120" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
-            <path d="M 50 50 L 75 75" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M 150 150 L 125 125" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M 150 50 L 125 75" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M 50 150 L 75 125" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- ALU / Core Internal Bus Lines -->
+            <line x1="75" y1="135" x2="125" y2="135" stroke="#3b82f6" stroke-width="1" opacity="0.7"/>
+            <line x1="75" y1="145" x2="125" y2="145" stroke="#3b82f6" stroke-width="1" opacity="0.7"/>
+            <line x1="75" y1="155" x2="125" y2="155" stroke="#3b82f6" stroke-width="1" opacity="0.7"/>
+            <line x1="90" y1="125" x2="90" y2="165" stroke="#3b82f6" stroke-width="1" opacity="0.7"/>
+            <line x1="110" y1="125" x2="110" y2="165" stroke="#3b82f6" stroke-width="1" opacity="0.7"/>
 
-            <!-- Circuit Nodes -->
-            <circle cx="30" cy="100" r="3" fill="#3b82f6" />
-            <circle cx="170" cy="100" r="3" fill="#3b82f6" />
-            <circle cx="100" cy="30" r="3" fill="#3b82f6" />
-            <circle cx="100" cy="170" r="3" fill="#3b82f6" />
-            <circle cx="50" cy="50" r="2.5" fill="#60a5fa" />
-            <circle cx="150" cy="150" r="2.5" fill="#60a5fa" />
-            <circle cx="150" cy="50" r="2.5" fill="#60a5fa" />
-            <circle cx="50" cy="150" r="2.5" fill="#60a5fa" />
-            <circle cx="85" cy="85" r="2" fill="#60a5fa" />
-            <circle cx="115" cy="115" r="2" fill="#60a5fa" />
-            <circle cx="20" cy="130" r="2" fill="#1e3a8a" />
-            <circle cx="180" cy="70" r="2" fill="#1e3a8a" />
+            <!-- IC Pins / Traces radiating outward -->
+            <!-- Top pins from CPU -->
+            <line x1="75" y1="125" x2="75" y2="105" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="100" y1="125" x2="100" y2="100" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="125" y1="125" x2="125" y2="105" stroke="#3b82f6" stroke-width="1.5"/>
+            
+            <!-- Bottom pins -->
+            <line x1="75" y1="165" x2="75" y2="185" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="100" y1="165" x2="100" y2="190" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="125" y1="165" x2="125" y2="185" stroke="#3b82f6" stroke-width="1.5"/>
+            
+            <!-- Side pins -->
+            <line x1="65" y1="135" x2="40" y2="135" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="65" y1="155" x2="35" y2="155" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="135" y1="135" x2="160" y2="135" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="135" y1="155" x2="165" y2="155" stroke="#3b82f6" stroke-width="1.5"/>
 
-            <!-- HW Letters -->
-            <text x="100" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="700" fill="#f8fafc" text-anchor="middle" letter-spacing="-2">HW</text>
+            <!-- IC Pin Nodes / Pads -->
+            <circle cx="75" cy="105" r="2" fill="#60a5fa"/>
+            <circle cx="100" cy="100" r="2" fill="#60a5fa"/>
+            <circle cx="125" cy="105" r="2" fill="#60a5fa"/>
+            <circle cx="75" cy="185" r="2" fill="#60a5fa"/>
+            <circle cx="100" cy="190" r="2" fill="#60a5fa"/>
+            <circle cx="125" cy="185" r="2" fill="#60a5fa"/>
+            <circle cx="40" cy="135" r="2" fill="#60a5fa"/>
+            <circle cx="35" cy="155" r="2" fill="#60a5fa"/>
+            <circle cx="160" cy="135" r="2" fill="#60a5fa"/>
+            <circle cx="165" cy="155" r="2" fill="#60a5fa"/>
+
+            <!-- Upper Background Circuit Lines -->
+            <path d="M 30 70 L 60 70 L 75 85" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 170 70 L 140 70 L 125 85" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="30" cy="70" r="2.5" fill="#3b82f6"/>
+            <circle cx="170" cy="70" r="2.5" fill="#3b82f6"/>
+
+            <!-- HW Letters (Positioned slightly above center) -->
+            <text x="100" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="58" font-weight="700" fill="#f8fafc" text-anchor="middle" letter-spacing="-2">HW</text>
         </svg>
     </div>
 </body>
