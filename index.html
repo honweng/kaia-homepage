@@ -26,23 +26,25 @@
                 radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.12) 0px, transparent 50%);
             color: var(--text);
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 1.5rem;
+            padding: 2rem 1.5rem;
         }
 
         .profile-card {
             background: var(--card-bg);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            padding: 3.25rem 2.75rem;
-            border-radius: 22px;
+            padding: 3rem 2.25rem;
+            border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border);
             text-align: center;
-            max-width: 480px;
+            max-width: 400px;
             width: 100%;
+            margin: auto;
             transition: transform 0.3s ease;
         }
 
@@ -125,13 +127,14 @@
         }
 
         .footer {
-            margin-top: 2.25rem;
             font-size: 0.8rem;
             color: var(--text-muted);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.4rem;
+            margin-top: auto;
+            padding-top: 1.5rem;
         }
     </style>
 </head>
@@ -157,10 +160,10 @@
                 <span>🦊</span> Meet Kaia & Setup
             </a>
         </div>
+    </div>
 
-        <div class="footer">
-            <a href="mailto:me@honweng.com" style="color: var(--text-muted); text-decoration: none;">✉️ me@honweng.com</a> • Powered by Kaia 🦊
-        </div>
+    <div class="footer">
+        <a href="mailto:me@honweng.com" style="color: var(--text-muted); text-decoration: none;">✉️ me@honweng.com</a> • Powered by Kaia 🦊
     </div>
 </body>
 </html>
