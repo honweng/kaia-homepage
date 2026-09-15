@@ -215,7 +215,14 @@
         <div class="header-card">
             <div class="icon-ring">🚀</div>
             <h1>Build Your Own AI Home Lab</h1>
-            <p class="subtitle">Official Tools, Frameworks & 4-Step Quickstart</p>
+            <p class="subtitle">A privacy-conscious blueprint for a personal AI workspace</p>
+        </div>
+
+        <div class="section-title">🧭 The shape of the setup</div>
+        <div class="blueprint-box">
+            <p class="resource-desc" style="font-size: 0.95rem; line-height: 1.65;">
+                A small always-on computer runs the agent, scheduled workflows, and private services. Remote access is protected by Cloudflare Zero Trust, while the public-facing web presence stays deliberately minimal. Personal data is stored locally and backed up with integrity checks.
+            </p>
         </div>
 
         <div class="section-title">📦 Core Tools & Official Resources</div>
@@ -226,11 +233,11 @@
             </a>
             <a href="https://aistudio.google.com" target="_blank" class="resource-card">
                 <div class="resource-title">Google AI Studio →</div>
-                <p class="resource-desc">Gemini 2.5/3.7 Flash models with 98% prompt caching discounts.</p>
+                <p class="resource-desc">A convenient place to manage Gemini access and experiment with models.</p>
             </a>
             <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/" target="_blank" class="resource-card">
                 <div class="resource-title">Cloudflare Tunnels →</div>
-                <p class="resource-desc">Zero Trust encrypted tunneling without open router ports.</p>
+                <p class="resource-desc">Zero Trust encrypted access without exposing router ports.</p>
             </a>
             <a href="https://www.raspberrypi.com/products/raspberry-pi-5/" target="_blank" class="resource-card">
                 <div class="resource-title">Raspberry Pi 5 →</div>
@@ -244,30 +251,57 @@
                 <div class="step-num">1</div>
                 <div class="step-content">
                     <h4>Edge Compute</h4>
-                    <p>Flash Debian 13 / Pi OS. Enable systemd linger with <code>loginctl enable-linger $USER</code> for boot persistence.</p>
+                    <p>Use a supported Debian-based system, reliable storage, automatic updates, and a dedicated user account for the workspace.</p>
                 </div>
             </div>
             <div class="step-item">
                 <div class="step-num">2</div>
                 <div class="step-content">
                     <h4>Install OpenClaw</h4>
-                    <p>Install globally: <code>npm install -g openclaw</code> and run onboarding wizard.</p>
+                    <p>Install OpenClaw using its official documentation, complete onboarding, and keep the Gateway bound to local interfaces.</p>
                 </div>
             </div>
             <div class="step-item">
                 <div class="step-num">3</div>
                 <div class="step-content">
                     <h4>Connect Models & Telegram</h4>
-                    <p>Get an API key from Google AI Studio and a bot token from <a href="https://t.me/BotFather" target="_blank" style="color:#38bdf8;">@BotFather</a>.</p>
+                    <p>Connect model providers and Telegram through the supported setup flow. Store credentials in protected SecretRefs; never put them in Git, public pages, or shell history.</p>
                 </div>
             </div>
             <div class="step-item">
                 <div class="step-num">4</div>
                 <div class="step-content">
                     <h4>Cloudflare Ingress</h4>
-                    <p>Install <code>cloudflared</code> to route custom domain traffic to local port 18789 securely.</p>
+                    <p>Install <code>cloudflared</code>, create narrow Zero Trust policies, and publish only the pages or services you intentionally choose.</p>
                 </div>
             </div>
+        </div>
+
+        <div class="section-title">🔐 Secure by default</div>
+        <div class="grid">
+            <div class="resource-card">
+                <div class="resource-title">Credentials</div>
+                <p class="resource-desc">Use SecretRefs where supported. Keep any unavoidable local credential files owner-only and rotate credentials after accidental exposure.</p>
+            </div>
+            <div class="resource-card">
+                <div class="resource-title">Remote access</div>
+                <p class="resource-desc">Use Zero Trust identity policies for remote access. Keep administrative interfaces private and expose only the minimum required surface.</p>
+            </div>
+            <div class="resource-card">
+                <div class="resource-title">Backups</div>
+                <p class="resource-desc">Back up configuration, databases, and content separately. Verify SQLite integrity and periodically test restoration.</p>
+            </div>
+            <div class="resource-card">
+                <div class="resource-title">Maintenance</div>
+                <p class="resource-desc">Pin important container versions, monitor service health, and rehearse upgrades with a current recovery path.</p>
+            </div>
+        </div>
+
+        <div class="section-title">🌱 Keep it private</div>
+        <div class="blueprint-box">
+            <p class="resource-desc" style="font-size: 0.95rem; line-height: 1.65;">
+                A good personal setup does not need to advertise its internal architecture. Publish only the main site and Journal; keep operational dashboards, service names, network details, and controls behind identity-aware access.
+            </p>
         </div>
 
         <div class="nav-links">
